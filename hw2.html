@@ -9,20 +9,108 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-info" href="index.html">CNIT133</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Homeworks
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="hw2.html">Homework 2</a>
+                        <a class="dropdown-item" href="hw3.html">Homework 3</a>
+                        <a class="dropdown-item" href="hw4.html">Homework 4</a>
+                        <a class="dropdown-item" href="hw5.html">Homework 5</a>
+                        <a class="dropdown-item" href="hw6.html">Homework 6</a>
+                        <a class="dropdown-item" href="hw7.html">Homework 7</a>
+                        <a class="dropdown-item" href="hw8.html">Homework 8</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1><a href="index.html" class="text-info">CNIT133 Homework</a></h1>
-                <h2>Bryan Liang</h2>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a href="javascript:" class="nav-link active hw2-nav"
+                            onclick="changePart('hw2');active(this);">Homework 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part1');active(this);">Part
+                            1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part2');active(this);">Part
+                            2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part3');active(this);">Part
+                            3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hw2-nav" href="javascript:"
+                            onclick="changePart('extra-credit');active(this);">Extra Credit</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="hw2" class="card-body part">Bryan Liang CNIT133 Homework 2</div>
+            <div id="part1" class="card-body part" style="display:none">
+                Create a webpage that contains a script that displays in pairs and <strong>strong</strong> (bold), the
+                letters ab and the
+                numbers 12 and 34 on the same line, with each pair of characters separated by one space. Write the
+                script using document.write statements. Use a font family of <span
+                    style="font-family: 'Times New Roman', Times, serif;"><strong>Times New Roman</strong></span> and
+                the color <span style="color:red;"><strong>red</strong></span> for the
+                letters <span style="color:red;"><strong>ab</strong></span>, a font family of <span
+                    style="font-family:Arial, Helvetica, sans-serif;"><strong>Arial</strong></span> and the color <span
+                    style="color:blue;"><strong>blue</strong></span>
+                for the the numbers <span style="color:blue;"><strong>12</strong></span> and a font family of
+                <span
+                    style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong>Impact</strong></span>,
+                the color <span style="color:green;"><strong>green</strong></span>, and <em>emphasized</em> (in italics)
+                for the numbers <span
+                    style="color:green; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><strong><em>34</em></strong></span>.
+                <hr>
+                <p>Output:</p>
+                <script>
+                    document.write(
+                        "<span style='color:red; font-family: Times New Roman, Times, serif;'><strong>ab </strong></span>"
+                        );
+                    document.write(
+                        "<span style='color:blue; font-family: Arial, Helvetica, sans-serif;'><strong>12 </strong></span>"
+                        );
+                    document.write(
+                        "<span style='color:green; font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;'><strong><em>34</em></strong></span>"
+                        );
+                </script>
+            </div>
+            <div id="part2" class="card-body part" style="display:none">
+                Part 2
+            </div>
+            <div id="part3" class="card-body part" style="display:none">
+                Part 3
+            </div>
+            <div id="extra-credit" class="card-body part" style="display:none">
+                Extra Credit
             </div>
         </div>
-        Part 1
     </div>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -33,6 +121,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="hw2.js"></script>
 </body>
 
 </html>
