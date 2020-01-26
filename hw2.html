@@ -90,17 +90,58 @@
                 <script>
                     document.write(
                         "<span style='color:red; font-family: Times New Roman, Times, serif;'><strong>ab </strong></span>"
-                        );
+                    );
                     document.write(
                         "<span style='color:blue; font-family: Arial, Helvetica, sans-serif;'><strong>12 </strong></span>"
-                        );
+                    );
                     document.write(
                         "<span style='color:green; font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;'><strong><em>34</em></strong></span>"
-                        );
+                    );
                 </script>
             </div>
             <div id="part2" class="card-body part" style="display:none">
-                Part 2
+                Create a webpage that contains a script that inputs three integers via form text boxes and displays the
+                sum, average, and product of the three integers, and the smallest and largest of the three integers.
+                <hr>
+                <script>
+                    function process() {
+                        var num1, num2, num3, min, max;
+                        num1 = parseInt(document.forms["part2"].elements["num1"].value);
+                        num2 = parseInt(document.forms["part2"].elements["num2"].value);
+                        num3 = parseInt(document.forms["part2"].elements["num3"].value);
+                        min = Math.min(num1, num2, num3);
+                        max = Math.max(num1, num2, num3);
+                        if (num1 && num2 && num3) {
+                            document.forms["part2"].elements["result"].value =
+                                `The sum is ${num1 + num2 + num3}.\nThe average is ${((num1 + num2 + num3)/3).toFixed(2)}.\nThe product is ${num1 * num2 * num3}.\nThe min is ${min}.\nThe max is ${max}.`;
+                        } else {
+                            document.forms["part2"].elements["result"].value = "Please enter integer numbers.";
+                        }
+                    }
+                </script>
+                <form name="part2">
+                    <table>
+                        <tr>
+                            <td>First number: </td>
+                            <td><input type="number" name="num1" id="num1"></td>
+                        </tr>
+                        <tr>
+                            <td>Second number: </td>
+                            <td><input type="number" name="num2" id="num2"></td>
+                        </tr>
+                        <tr>
+                            <td>Third number: </td>
+                            <td><input type="number" name="num3" id="num3"></td>
+                        </tr>
+                        <tr>
+                            <td>Result: </td>
+                            <td><textarea name="result" id="result" cols="40" rows="5" readonly></textarea></td>
+                        </tr>
+                    </table>
+                    <input type="button" onclick="process()" value="SUBMIT">
+                    <input type="button" id="fade" value="FADE">
+                    <input type="reset" id="reset" value="RESET">
+                </form>
             </div>
             <div id="part3" class="card-body part" style="display:none">
                 Part 3
@@ -111,10 +152,7 @@
         </div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>

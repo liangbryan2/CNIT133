@@ -6,3 +6,7 @@ body {
 .hwlink {
     font-size: 20px;
 }
+
+input {
+    text-align: right;
+}
