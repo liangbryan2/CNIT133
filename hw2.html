@@ -145,7 +145,8 @@
                 be shown. If all input is valid, no error message should be displayed and the result should then be
                 displayed in the textarea or div element.
                 <hr>
-                Enter 5 integers and click submit to count the number of positive integers, negative integers, and zeros.
+                Enter 5 integers and click submit to count the number of positive integers, negative integers, and
+                zeros.
                 <br></br>
                 <form name="part3">
                     <table>
@@ -179,7 +180,50 @@
                 </form>
             </div>
             <div id="extra-credit" class="card-body part" style="display:none">
-                Extra Credit
+                <div id="instructions" class="text-primary">Click to show/hide instructions</div>
+                <form id="ec-form">
+                    The exchange rates for 1 U.S. dollar in July 2019 were:
+                    <table id="ec">
+                        <tr>
+                            <th colspan="3">Monetary Exchange Rates</th>
+                        </tr>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Rate</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td class="ec-border">Euro</td>
+                            <td class="ec-border ec-num">0.89</td>
+                            <td class="ec-border ec-num" id="euro-value"></td>
+                        </tr>
+                        <tr>
+                            <td class="ec-border">Canadian Dollar</td>
+                            <td class="ec-border ec-num">1.31</td>
+                            <td class="ec-border ec-num" id="canada-value"></td>
+                        </tr>
+                        <tr>
+                            <td class="ec-border">Hong Kong Dollar</td>
+                            <td class="ec-border ec-num">7.80</td>
+                            <td class="ec-border ec-num" id="hk-value"></td>
+                        </tr>
+                        <tr>
+                            <td class="ec-border">Japanese Yen</td>
+                            <td class="ec-border ec-num">108.38</td>
+                            <td class="ec-border ec-num" id="yen-value"></td>
+                        </tr>
+                        <tr>
+                            <td class="ec-border">Mexican Peso</td>
+                            <td class="ec-border ec-num">19.11</td>
+                            <td class="ec-border ec-num" id="peso-value"></td>
+                        </tr>
+                        <tr>
+                            <td class="ec-border" colspan="2"><strong>Enter Amount of U.S. Dollars</strong></td>
+                            <td class="ec-border ec-num"><input type="text" id="us-value"></td>
+                        </tr>
+                    </table id="ec">
+                </form>
+                <div id="warning" class="text-danger displayNone">Please input a valid number.</div>
             </div>
         </div>
     </div>

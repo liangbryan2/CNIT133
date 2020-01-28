@@ -17,11 +17,36 @@ function active(element) {
 $(document).ready(function () {
     $("#fade").click(function () {
         $("#result").fadeTo("slow", 0.4);
-    })
+    });
     $("#reset").click(function () {
         $("#result").fadeTo("fast", 1);
+    });
+    $("#us-value").click(() => {
+        $("#us-value").addClass("backgroundGray");
+    });
+    $("#instructions").click(function () {
+        $("#ec-form").slideToggle("slow");
+    });
+    $("#ec-form").submit(function () {
+        exchangeRate();
+        return false;
     })
-})
+});
+
+function exchangeRate() {
+    var usValue = $("#us-value").val();
+    usValue = parseFloat(usValue);
+    if(Number.isNaN(usValue)) {
+        $("#warning").removeClass("displayNone");
+    } else {
+        $("#warning").addClass("displayNone");
+        $("#euro-value").text((usValue * 0.89).toFixed(2));
+        $("#canada-value").text((usValue * 1.31).toFixed(2));
+        $("#hk-value").text((usValue * 7.80).toFixed(2));
+        $("#yen-value").text((usValue * 108.38).toFixed(2));
+        $("#peso-value").text((usValue * 19.11).toFixed(2));
+    }
+}
 
 function process() {
     var num1, num2, num3, min, max;
