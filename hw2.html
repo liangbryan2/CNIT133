@@ -102,23 +102,16 @@
             <div id="part2" class="card-body part" style="display:none">
                 Create a webpage that contains a script that inputs three integers via form text boxes and displays the
                 sum, average, and product of the three integers, and the smallest and largest of the three integers.
+                Your results should be displayed using a form textarea or a div element - DO NOT USE ALERT!!!.
+                You should not present any result if the user does not type NUMBERS in the input boxes!!! An error
+                message should be displayed in this case. If the input from the user are all valid, then present the
+                result and the error message should not be shown anymore!
+                Define a 'Click to Fade Results' button on the form. Use jQuery to define a ready handler that defines a
+                click event handler for the button, such that clicking the button fades the results in the textarea or
+                div where you put the results.
                 <hr>
-                <script>
-                    function process() {
-                        var num1, num2, num3, min, max;
-                        num1 = parseInt(document.forms["part2"].elements["num1"].value);
-                        num2 = parseInt(document.forms["part2"].elements["num2"].value);
-                        num3 = parseInt(document.forms["part2"].elements["num3"].value);
-                        min = Math.min(num1, num2, num3);
-                        max = Math.max(num1, num2, num3);
-                        if (num1 && num2 && num3) {
-                            document.forms["part2"].elements["result"].value =
-                                `The sum is ${num1 + num2 + num3}.\nThe average is ${((num1 + num2 + num3)/3).toFixed(2)}.\nThe product is ${num1 * num2 * num3}.\nThe min is ${min}.\nThe max is ${max}.`;
-                        } else {
-                            document.forms["part2"].elements["result"].value = "Please enter integer numbers.";
-                        }
-                    }
-                </script>
+                Enter three integers and click submit to find the sum, average, product, min, and max.
+                <br></br>
                 <form name="part2">
                     <table>
                         <tr>
@@ -144,7 +137,46 @@
                 </form>
             </div>
             <div id="part3" class="card-body part" style="display:none">
-                Part 3
+                Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of
+                the negative numbers, the number of positive numbers, and the number of zeros. Use input boxes in a form
+                for the input numbers. Your results should be displayed using a form textarea or a div element - NO
+                ALERT WILL BE ACCEPTED!!!
+                If the user inputs any invalid (not number), an error message should be displayed and no result should
+                be shown. If all input is valid, no error message should be displayed and the result should then be
+                displayed in the textarea or div element.
+                <hr>
+                Enter 5 integers and click submit to count the number of positive integers, negative integers, and zeros.
+                <br></br>
+                <form name="part3">
+                    <table>
+                        <tr>
+                            <td>First number: </td>
+                            <td><input type="number" name="p3num1" id="p3num1"></td>
+                        </tr>
+                        <tr>
+                            <td>Second number: </td>
+                            <td><input type="number" name="p3num2" id="p3num2"></td>
+                        </tr>
+                        <tr>
+                            <td>Third number: </td>
+                            <td><input type="number" name="p3num3" id="p3num3"></td>
+                        </tr>
+                        <tr>
+                            <td>Fourth number: </td>
+                            <td><input type="number" name="p3num4" id="p3num4"></td>
+                        </tr>
+                        <tr>
+                            <td>Fifth number: </td>
+                            <td><input type="number" name="p3num5" id="p3num5"></td>
+                        </tr>
+                        <tr>
+                            <td>Result: </td>
+                            <td><textarea name="p3result" id="p3result" cols="40" rows="3" readonly></textarea></td>
+                        </tr>
+                    </table>
+                    <input type="button" onclick="processp3()" value="SUBMIT">
+                    <input type="reset" id="p3reset" value="RESET">
+                </form>
             </div>
             <div id="extra-credit" class="card-body part" style="display:none">
                 Extra Credit
