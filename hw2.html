@@ -48,23 +48,23 @@
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <a href="javascript:" class="nav-link active hw2-nav"
-                            onclick="changePart('hw2');active(this);">Homework 2</a>
+                            onclick="changePart('hw2');active(this, 'hw2-nav');">Homework 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part1');active(this);">Part
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part1');active(this, 'hw2-nav');">Part
                             1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part2');active(this);">Part
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part2');active(this, 'hw2-nav');">Part
                             2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part3');active(this);">Part
+                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part3');active(this, 'hw2-nav');">Part
                             3</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link hw2-nav" href="javascript:"
-                            onclick="changePart('extra-credit');active(this);">Extra Credit</a>
+                            onclick="changePart('extra-credit');active(this, 'hw2-nav');">Extra Credit</a>
                     </li>
                 </ul>
             </div>
@@ -128,7 +128,7 @@
                         </tr>
                         <tr>
                             <td>Result: </td>
-                            <td><textarea name="result" id="result" cols="40" rows="5" readonly></textarea></td>
+                            <td><textarea name="result" id="result" class="form-control" cols="40" rows="5" readonly></textarea></td>
                         </tr>
                     </table>
                     <input type="button" onclick="process()" value="SUBMIT">
@@ -172,7 +172,7 @@
                         </tr>
                         <tr>
                             <td>Result: </td>
-                            <td><textarea name="p3result" id="p3result" cols="40" rows="3" readonly></textarea></td>
+                            <td><textarea name="p3result" id="p3result" class="form-control" cols="40" rows="3" readonly></textarea></td>
                         </tr>
                     </table>
                     <input type="button" onclick="processp3()" value="SUBMIT">
@@ -236,7 +236,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="hw2.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
