@@ -61,6 +61,26 @@ $(document).ready(function () {
             return false;
         }
     });
+    $("#hw3part3form").submit(function (event) {
+        event.preventDefault();
+    }).validate({
+        rules: {
+            temperature: {
+                required: true,
+                number: true
+            }
+        },
+        submitHandler: function (form) {
+            var name = $("input[type=submit][clicked=true]").attr("name");
+            var temp = $("#temperature").val();
+            calculateTemperature(name, temp);
+            return false;
+        }
+    });
+    $("#hw3part3form input[type=submit]").click(function () {
+        $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+        $(this).attr("clicked", "true");
+    });
 });
 
 function exchangeRate() {
@@ -171,5 +191,21 @@ function calculateEarnings() {
         $("#total4").val((item4 * item4price).toFixed(2));
         $("#totalSold").val(totalSold);
         $("#totalEarnings").val(weeklyEarnings);
+    }
+}
+
+function calculateTemperature(name, temp) {
+    var newTemp;
+    switch (name) {
+        case "ctof": {
+            newTemp = (9 / 5 * +temp) + 32;
+            $("#temperatureResult").val(Math.round(newTemp) + "F");
+            break;
+        }
+        case "ftoc": {
+            newTemp = 5 / 9 * (+temp - 32);
+            $("#temperatureResult").val(Math.round(newTemp) + "C");
+            break;
+        }
     }
 }

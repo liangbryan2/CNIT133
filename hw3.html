@@ -257,7 +257,27 @@
                     </tr>
                 </table>
             </div>
-            <div id="hw3part3" class="part card-body" style="display:none"></div>
+            <div id="hw3part3" class="part card-body" style="display:none">
+                <h3>Temperature Converter</h3>
+                <p>Create a webpage that allows a user to enter a number into an input box. Provide two buttons, one to
+                    convert from Fahrenheit to Celsius, another from Celsius to Fahrenheit. The formulas are as follow:
+                </p>
+                <p>C = 5/9 * (F - 32)</p>
+                <p>F = (9/5 * C) + 32</p>
+                <p>Check to see that the user's input is valid. Display an error message if it is invalid. If the input
+                    is valid, display the temperature with no decimals.</p>
+                <hr>
+                <form id="hw3part3form">
+                    <label for="temperature">Enter a temperature:</label>
+                    <input type="number" name="temperature" id="temperature">
+                    <br>
+                    <input type="submit" name="ctof" value="Celsius to Fahrenheit">
+                    <input type="submit" name="ftoc" value="Fahrenheit to Celsius">
+                    <br>
+                    <label for="temperatureResult">Result:</label>
+                    <input type="text" name="temperatureResult" id="temperatureResult" readonly>
+                </form>
+            </div>
             <div id="hw3part4" class="part card-body" style="display:none"></div>
         </div>
     </div>
