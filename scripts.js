@@ -1,3 +1,4 @@
+// ALL HOMEWORKS
 function changePart(element) {
     let items = document.getElementsByClassName('part');
     for (var i = 0; i < items.length; i++) {
@@ -13,8 +14,12 @@ function active(element, hw) {
     }
     element.classList.add("active");
 }
+// END ALL HOMEWORKS
 
+// FOR JQUERY
 $(document).ready(function () {
+
+    // HOMEWORK 2 JQUERY
     $("#fade").click(function () {
         $("#result").fadeTo("slow", 0.4);
     });
@@ -31,6 +36,10 @@ $(document).ready(function () {
         exchangeRate();
         return false;
     });
+    // END HOMEWORK 2 JQUERY
+
+
+    // HOMEWORK 3 JQUERY
     $("#salesperson").tooltip();
     $("#hw3part2form").submit(function (event) {
         event.preventDefault();
@@ -81,8 +90,20 @@ $(document).ready(function () {
         $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
         $(this).attr("clicked", "true");
     });
-});
+    multiplyRandomZeroToNine();
 
+    $("#hw3part4").submit(function (event) {
+        event.preventDefault();
+        var answer = $("#hw3part4answer").val();
+        checkProduct(answer);
+        $("#hw3part4answer").val('');
+    })
+
+    // END HOMEWORK 3 JQUERY
+});
+// END JQUERY
+
+// HOMEWORK 2
 function exchangeRate() {
     var usValue = $("#us-value").val();
     usValue = parseFloat(usValue);
@@ -167,6 +188,9 @@ function calculateGrade() {
         $("#finalGrade").val("Please enter valid grades.");
     }
 }
+// END HOMEWORK 2
+
+// HOMEWORK 3
 const item1price = 239.99;
 const item2price = 129.75;
 const item3price = 99.95;
@@ -209,3 +233,35 @@ function calculateTemperature(name, temp) {
         }
     }
 }
+
+var product;
+
+function multiplyRandomZeroToNine() {
+    var num1 = Math.floor(Math.random() * 10);
+    var num2 = Math.floor(Math.random() * 10);
+    $(".multiplicationQuestion").empty();
+    $("#hw3part4response").empty();
+    $(".multiplicationQuestion").html(`How much is ${num1} times ${num2}?`);
+    product = num1 * num2;
+    $(".multiplicationQuestion").append("<form id='hw3part4'><input type='number' id='hw3part4answer'></form>");
+    $("#hw3part4answer").focus();
+}
+
+function checkProduct(userAnswer) {
+    $("#hw3part4response").text("");
+    $("#hw3part4response").html("<p class='green'>Very good!</p>");
+    if (userAnswer == product) {
+        $("#hw3part4response").html("<p class='green'>Very good!</p>");
+        setTimeout(() => {
+            var cont = confirm("Would you like to continue?")
+            if (cont) {
+                multiplyRandomZeroToNine();
+            }
+        }, 100);
+    } else {
+        $("#hw3part4response").html("<p class='red'>No. Please try again.</p>");
+    }
+}
+
+
+// END HOMEWORK 3

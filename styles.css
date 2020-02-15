@@ -39,3 +39,19 @@ input {
 .displayNone {
     display: none;
 }
+
+.multiplicationQuestion {
+    text-align: center;
+}
+
+#hw3part4response {
+    text-align: center;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
