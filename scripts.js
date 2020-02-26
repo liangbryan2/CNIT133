@@ -100,6 +100,10 @@ $(document).ready(function () {
     })
 
     // END HOMEWORK 3 JQUERY
+
+    // HOMEWORK 4 JQUERY
+
+    // END HOMEWORK 4 JQUERY
 });
 // END JQUERY
 
@@ -243,7 +247,10 @@ function multiplyRandomZeroToNine() {
     $("#hw3part4response").empty();
     $(".multiplicationQuestion").html(`How much is ${num1} times ${num2}?`);
     product = num1 * num2;
-    $(".multiplicationQuestion").append("<form id='hw3part4'><input type='number' id='hw3part4answer'></form>");
+    $(".multiplicationQuestion").append(`<form id='hw3part4'>
+                                            <input type='number' id='hw3part4answer'>
+                                            <input type="submit" value="SUBMIT">
+                                        </form>`);
     $("#hw3part4answer").focus();
 }
 
@@ -263,5 +270,9 @@ function checkProduct(userAnswer) {
     }
 }
 
-
 // END HOMEWORK 3
+
+// HOMEWORK 4
+
+
+// END HOMEWORK 4
