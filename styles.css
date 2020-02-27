@@ -55,3 +55,12 @@ input {
 .red {
     color: red;
 }
+
+#hw3part1table td, #hw3part1table tr, #hw3part2table td, #hw3part2table tr {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.error {
+    display: block;
+}

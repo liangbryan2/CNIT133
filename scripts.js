@@ -40,6 +40,36 @@ $(document).ready(function () {
 
 
     // HOMEWORK 3 JQUERY
+    $("#hw3part1form").submit(function(event) {
+        event.preventDefault();
+    })
+    // }).validate({
+    //     rules: {
+    //         hwAvg: {
+    //             required: true,
+    //             digits: true
+    //         },
+    //         midExam: {
+    //             required: true,
+    //             digits: true
+    //         },
+    //         finalExam: {
+    //             required: true,
+    //             digits: true
+    //         },
+    //         participation: {
+    //             required: true,
+    //             digits: true
+    //         }
+    //     },
+    //     messages: {
+    //         hwAvg: "Please enter a number from 0 to 100.",
+    //         midExam: "Please enter a number from 0 to 100.",
+    //         finalExam: "Please enter a number from 0 to 100.",
+    //         participation: "Please enter a number from 0 to 100.",
+    //     }
+    // })
+
     $("#salesperson").tooltip();
     $("#hw3part2form").submit(function (event) {
         event.preventDefault();
@@ -64,6 +94,12 @@ $(document).ready(function () {
                 required: true,
                 digits: true
             }
+        },
+        messages: {
+            item1: "Please input positive integers.",
+            item2: "Please input positive integers.",
+            item3: "Please input positive integers.",
+            item4: "Please input positive integers.",
         },
         submitHandler: function (form) {
             calculateEarnings();
@@ -263,6 +299,8 @@ function checkProduct(userAnswer) {
             var cont = confirm("Would you like to continue?")
             if (cont) {
                 multiplyRandomZeroToNine();
+            } else {
+                $("#hw3part4response").html("<p>Bye!</p>")
             }
         }, 100);
     } else {
