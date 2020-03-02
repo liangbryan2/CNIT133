@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 
     // HOMEWORK 3 JQUERY
-    $("#hw3part1form").submit(function(event) {
+    $("#hw3part1form").submit(function (event) {
         event.preventDefault();
     })
     // }).validate({
@@ -311,6 +311,63 @@ function checkProduct(userAnswer) {
 // END HOMEWORK 3
 
 // HOMEWORK 4
+function fourthIntegerLoop(a, b) {
+    var product = 1;
+    var sum = 0;
+    var productString = "";
+    var sumString = "";
+    for (var i = a; i <= b; i += 4) {
+        product = product * i;
+        productString = productString + " * " + i;
+        sum = sum += i;
+        sumString = sumString + " + " + i;
+    }
+    productString = productString.substring(3);
+    sumString = sumString.substring(3);
+    $("#hw4part1a").append(`<p>${productString} = ${product}</p>
+                            <p>${sumString} = ${sum}</p>`);
+}
+fourthIntegerLoop(5, 21);
 
+function thirdIntegerLoop(a, b) {
+    var product = 1;
+    var sum = 0;
+    var productString = "";
+    var sumString = "";
+    var i = a;
+    do {
+        product = product * i;
+        productString = productString + " * " + i;
+        sum = sum += i;
+        sumString = sumString + " + " + i;
+        i += 3;
+    } while (i <= b);
+    productString = productString.substring(3);
+    sumString = sumString.substring(3);
+    $("#hw4part1b").append(`<p>${productString} = ${product}</p>
+                            <p>${sumString} = ${sum}</p>`);
+}
+thirdIntegerLoop(3, 21);
 
+function generateCoIntTable() {
+    var container = $("#tableContainer");
+    for (var r = 5; r <= 7; r++) {
+        var table = $('<table>');
+        table.addClass("interestTable");
+        var tr = $('<tr>');
+        tr.append('<th>Year</th><th>Amount on deposit</th><th>Interest Rate</th>');
+        table.append(tr);
+        for (var n = 1; n <= 10; n++) {
+            var tr1 = $('<tr>');
+            var amount = 1000 * Math.pow((1 + (r / 100)), n);
+            amount = amount.toFixed(2);
+            tr1.append('<td>' + n + '</td>');
+            tr1.append('<td>' + amount + '</td>');
+            tr1.append('<td>0.0' + r + '</td>');
+            table.append(tr1);
+        }
+        container.append(table);
+    }
+}
+generateCoIntTable();
 // END HOMEWORK 4

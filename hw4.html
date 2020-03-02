@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -66,19 +66,63 @@
                     </li>
                 </ul>
             </div>
+            <div id="hw4" class="part card-body">Bryan Liang CNIT133 Homework 4 Loops</div>
+            <div id="hw4part1" class="part card-body" style="display:none">
+                <p>Part 1a: Create a webpage that contains a script, using the for statement, that calculates the
+                    product and sum of every fourth integer from 5 to 21 inclusive and then displays the results, along
+                    with some accompanying text.</p>
+                <p>Part 1b: On the same webpage as Part 1b, create a script, using the while or do while statement, that
+                    calculates the product and sum of every third integer from 3 to 21 inclusive an then displays the
+                    results, along with some accompanying text.</p>
+                <p>Use jQuery UI to allow the user to drag an element to a specific area of the page - can be any type
+                    of element. For more on jQuery UI draggable see the <a href="https://jqueryui.com/draggable/"
+                        target="_blank" rel="noreferrer">example in this page.</a></p>
+                <hr>
+                <p id="hw4part1a"><strong>Part 1a:</strong></p>
+                <p id="hw4part1b"><strong>Part 1b:</strong></p>
+                <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" />
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+                </script>
+                <script type="text/javascript"
+                    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#drag").draggable();
+                    });
+                </script>
+                <div id="drag" class="ui-widget-content">
+                    <p>Drag me around!</p>
+                </div>
+            </div>
+            <div id="hw4part2" class="part card-body" style="display:none">
+                <p>Create a webpage that contains a script that will calculate compound interest on a principal of $1000
+                    for interest rates of 5, 6, and 7%, for years 1 through 10. The formula to use is : A = P(1 + r)^n
+                    where
+                </p>
+                <p>P is the principal (the initial amount you borrow or deposit)
+                    <br>
+                    r is the annual rate of interest (percentage)
+                    <br>
+                    n is the number of years the amount is deposited
+                    <br>
+                    A is the amount of money accumulated after n years, including interest</p>
+                <hr>
+                <div id='tableContainer'></div>
+            </div>
+            <div id="hw4ec" class="part card-body" style="display:none">Bryan Liang CNIT133 Homework 4 Loops</div>
         </div>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://use.fontawesome.com/18b1df2d3f.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

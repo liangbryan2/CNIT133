@@ -1,62 +1,99 @@
 body {
-    background-image: url("background.png");
-    background-size: cover;
+  background-image: url("background.png");
+  background-size: cover;
 }
 
 .hwlink {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 input {
-    text-align: right;
+  text-align: right;
 }
 
 .ec-border {
-    border: 1px dotted gray;
+  border: 1px dotted gray;
 }
 
 .ec-num {
-    text-align: right;
+  text-align: right;
 }
 
 #ec th {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 #instructions {
-    display: inline-block;
-    cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
 }
 
 #instructions:hover {
-    background-color: rgb(241, 241, 241);
+  background-color: rgb(241, 241, 241);
 }
 
 .backgroundGray {
-    background-color: rgb(241, 241, 241);
+  background-color: rgb(241, 241, 241);
 }
 
 .displayNone {
-    display: none;
+  display: none;
 }
 
 .multiplicationQuestion {
-    text-align: center;
+  text-align: center;
 }
 
 #hw3part4response {
-    text-align: center;
+  text-align: center;
 }
 
 .green {
-    color: green;
+  color: green;
 }
 
 .red {
-    color: red;
+  color: red;
 }
 
-#hw3part1table td, #hw3part1table tr, #hw3part2table td, #hw3part2table tr {
-    border-collapse: collapse;
+#hw3part1table td,
+#hw3part1table tr,
+#hw3part2table td,
+#hw3part2table tr {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+a[target="_blank"]:after {
+  font-family: "FontAwesome";
+  content: " \f08e";
+}
+
+#drag {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+}
+
+#tableContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 12px;
+}
+
+.interestTable, th, td {
     border: 1px solid black;
+}
+
+.interestTable th {
+    background-color: maroon;
+    color: white;
+}
+
+.interestTable tr:nth-child(odd) {
+    background-color: yellow;
+}
+
+.interestTable tr:nth-child(even) {
+    background-color: orange;
 }
