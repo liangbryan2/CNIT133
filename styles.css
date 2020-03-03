@@ -97,3 +97,14 @@ a[target="_blank"]:after {
 .interestTable tr:nth-child(even) {
     background-color: orange;
 }
+
+#squareForm {
+    text-align: center;
+}
+
+#squareLocation {
+    font-size: 16px;
+    font-family: monospace;
+    text-align: center;
+    line-height: 60%;
+}

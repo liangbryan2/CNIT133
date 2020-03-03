@@ -109,7 +109,24 @@
                 <hr>
                 <div id='tableContainer'></div>
             </div>
-            <div id="hw4ec" class="part card-body" style="display:none">Bryan Liang CNIT133 Homework 4 Loops</div>
+            <div id="hw4ec" class="part card-body" style="display:none">
+                <p>Create a webpage that contains a script that reads in the size of the side of a square and displays a
+                    hollow square of that size constructed of asterisks. Your script should work for squares only for
+                    side sizes between 2 and 10 inclusive. Display an error message if the user enters any number that
+                    is not between 2 and 10 and, of course, DO NOT PRESENT THE SQUARE. Be sure that the output looks
+                    like a square. A common error is having the top and bottom row of asterisks appear to be smaller
+                    than the sides.</p>
+                    <hr>
+                    <form id="squareForm">
+                        <input type="number" name="sideLength" id="sideLength" min=2 max=10>
+                        <br>
+                        <input type="submit" style="display:none">
+                        <input type="submit" value="Generate Square">
+                    </form>
+                    <br>
+                    <div id="squareLocation">
+                    </div>
+            </div>
         </div>
     </div>
 

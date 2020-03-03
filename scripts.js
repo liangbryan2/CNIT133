@@ -138,7 +138,11 @@ $(document).ready(function () {
     // END HOMEWORK 3 JQUERY
 
     // HOMEWORK 4 JQUERY
-
+    $('#squareForm').submit(function(event) {
+        event.preventDefault();
+        var squareLength = $("#sideLength").val();
+        generateSquare(squareLength);
+    })
     // END HOMEWORK 4 JQUERY
 });
 // END JQUERY
@@ -370,4 +374,20 @@ function generateCoIntTable() {
     }
 }
 generateCoIntTable();
+
+function generateSquare(length) {
+    var squareLocation = $("#squareLocation");
+    squareLocation.empty();
+    for(var i = 0; i < length; i++) {
+        for(var j = 0; j < length; j++) {
+            if (i == 0 || i == (length - 1) || j == 0 || j == (length - 1)) {
+                squareLocation.append("*");
+            }
+            else {
+                squareLocation.append("&nbsp;");
+            }
+        }
+        squareLocation.append("<br>");
+    }
+}
 // END HOMEWORK 4
