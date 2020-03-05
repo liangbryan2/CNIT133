@@ -112,6 +112,8 @@ $(document).ready(function () {
     // END HOMEWORK 3 JQUERY
 
     // HOMEWORK 4 JQUERY
+    $("#drag").draggable();
+    
     $('#squareForm').submit(function(event) {
         event.preventDefault();
         var squareLength = $("#sideLength").val();

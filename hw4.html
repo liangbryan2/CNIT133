@@ -10,6 +10,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" />
 </head>
 
 <body>
@@ -80,16 +81,6 @@
                 <hr>
                 <p id="hw4part1a"><strong>Part 1a:</strong></p>
                 <p id="hw4part1b"><strong>Part 1b:</strong></p>
-                <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" />
-                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-                </script>
-                <script type="text/javascript"
-                    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-                <script type="text/javascript">
-                    $(function () {
-                        $("#drag").draggable();
-                    });
-                </script>
                 <div id="drag" class="ui-widget-content">
                     <p>Drag me around!</p>
                 </div>
@@ -116,20 +107,22 @@
                     is not between 2 and 10 and, of course, DO NOT PRESENT THE SQUARE. Be sure that the output looks
                     like a square. A common error is having the top and bottom row of asterisks appear to be smaller
                     than the sides.</p>
-                    <hr>
-                    <form id="squareForm">
-                        <input type="number" name="sideLength" id="sideLength" min=2 max=10>
-                        <br>
-                        <input type="submit" style="display:none">
-                        <input type="submit" value="Generate Square">
-                    </form>
+                <hr>
+                <form id="squareForm">
+                    <input type="number" name="sideLength" id="sideLength" min=2 max=10>
                     <br>
-                    <div id="squareLocation">
-                    </div>
+                    <input type="submit" style="display:none">
+                    <input type="submit" value="Generate Square">
+                </form>
+                <br>
+                <div id="squareLocation">
+                </div>
             </div>
         </div>
     </div>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
