@@ -42,33 +42,7 @@ $(document).ready(function () {
     // HOMEWORK 3 JQUERY
     $("#hw3part1form").submit(function (event) {
         event.preventDefault();
-    })
-    // }).validate({
-    //     rules: {
-    //         hwAvg: {
-    //             required: true,
-    //             digits: true
-    //         },
-    //         midExam: {
-    //             required: true,
-    //             digits: true
-    //         },
-    //         finalExam: {
-    //             required: true,
-    //             digits: true
-    //         },
-    //         participation: {
-    //             required: true,
-    //             digits: true
-    //         }
-    //     },
-    //     messages: {
-    //         hwAvg: "Please enter a number from 0 to 100.",
-    //         midExam: "Please enter a number from 0 to 100.",
-    //         finalExam: "Please enter a number from 0 to 100.",
-    //         participation: "Please enter a number from 0 to 100.",
-    //     }
-    // })
+    });
 
     $("#salesperson").tooltip();
     $("#hw3part2form").submit(function (event) {
