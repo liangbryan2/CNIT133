@@ -76,35 +76,41 @@ a[target="_blank"]:after {
 }
 
 #tableContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 12px;
 }
 
-.interestTable, th, td {
-    border: 1px solid black;
+.interestTable,
+th,
+td {
+  border: 1px solid black;
 }
 
 .interestTable th {
-    background-color: maroon;
-    color: white;
+  background-color: maroon;
+  color: white;
 }
 
 .interestTable tr:nth-child(odd) {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .interestTable tr:nth-child(even) {
-    background-color: orange;
+  background-color: orange;
 }
 
 #squareForm {
-    text-align: center;
+  text-align: center;
 }
 
 #squareLocation {
-    font-size: 16px;
-    font-family: monospace;
-    text-align: center;
-    line-height: 60%;
+  font-size: 16px;
+  font-family: monospace;
+  text-align: center;
+  line-height: 60%;
+}
+
+.error {
+  color: red;
 }

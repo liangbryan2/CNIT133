@@ -1,137 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="CNIT 133 Homework 4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CNIT 133 Homework 4" />
     <title>CNIT 133 HW4</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" />
-</head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand text-info" href="index.html">CNIT133</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Homeworks
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="hw2.html">Homework 2</a>
-                        <a class="dropdown-item" href="hw3.html">Homework 3</a>
-                        <a class="dropdown-item" href="hw4.html">Homework 4</a>
-                        <a class="dropdown-item" href="hw5.html">Homework 5</a>
-                        <a class="dropdown-item" href="hw6.html">Homework 6</a>
-                        <a class="dropdown-item" href="hw7.html">Homework 7</a>
-                        <a class="dropdown-item" href="hw8.html">Homework 8</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand text-info" href="index.html">CNIT133</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Homeworks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="hw2.html">Homework 2</a>
+              <a class="dropdown-item" href="hw3.html">Homework 3</a>
+              <a class="dropdown-item" href="hw4.html">Homework 4</a>
+              <a class="dropdown-item" href="hw5.html">Homework 5</a>
+              <a class="dropdown-item" href="hw6.html">Homework 6</a>
+              <a class="dropdown-item" href="hw7.html">Homework 7</a>
+              <a class="dropdown-item" href="hw8.html">Homework 8</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a href="javascript:" class="nav-link active hw4-nav"
-                            onclick="changePart('hw4');active(this, 'hw4-nav');">Homework 4</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hw4-nav" href="javascript:"
-                            onclick="changePart('hw4part1');active(this, 'hw4-nav');">Part
-                            1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hw4-nav" href="javascript:"
-                            onclick="changePart('hw4part2');active(this, 'hw4-nav');">Part
-                            2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hw4-nav" href="javascript:"
-                            onclick="changePart('hw4ec');active(this, 'hw4-nav');">Extra Credit</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="hw4" class="part card-body">Bryan Liang CNIT133 Homework 4 Loops</div>
-            <div id="hw4part1" class="part card-body" style="display:none">
-                <p>Part 1a: Create a webpage that contains a script, using the for statement, that calculates the
-                    product and sum of every fourth integer from 5 to 21 inclusive and then displays the results, along
-                    with some accompanying text.</p>
-                <p>Part 1b: On the same webpage as Part 1b, create a script, using the while or do while statement, that
-                    calculates the product and sum of every third integer from 3 to 21 inclusive an then displays the
-                    results, along with some accompanying text.</p>
-                <p>Use jQuery UI to allow the user to drag an element to a specific area of the page - can be any type
-                    of element. For more on jQuery UI draggable see the <a href="https://jqueryui.com/draggable/"
-                        target="_blank" rel="noreferrer">example in this page.</a></p>
-                <hr>
-                <p id="hw4part1a"><strong>Part 1a:</strong></p>
-                <p id="hw4part1b"><strong>Part 1b:</strong></p>
-                <div id="drag" class="ui-widget-content">
-                    <p>Drag me around!</p>
-                </div>
-            </div>
-            <div id="hw4part2" class="part card-body" style="display:none">
-                <p>Create a webpage that contains a script that will calculate compound interest on a principal of $1000
-                    for interest rates of 5, 6, and 7%, for years 1 through 10. The formula to use is : A = P(1 + r)^n
-                    where
-                </p>
-                <p>P is the principal (the initial amount you borrow or deposit)
-                    <br>
-                    r is the annual rate of interest (percentage)
-                    <br>
-                    n is the number of years the amount is deposited
-                    <br>
-                    A is the amount of money accumulated after n years, including interest</p>
-                <hr>
-                <div id='tableContainer'></div>
-            </div>
-            <div id="hw4ec" class="part card-body" style="display:none">
-                <p>Create a webpage that contains a script that reads in the size of the side of a square and displays a
-                    hollow square of that size constructed of asterisks. Your script should work for squares only for
-                    side sizes between 2 and 10 inclusive. Display an error message if the user enters any number that
-                    is not between 2 and 10 and, of course, DO NOT PRESENT THE SQUARE. Be sure that the output looks
-                    like a square. A common error is having the top and bottom row of asterisks appear to be smaller
-                    than the sides.</p>
-                <hr>
-                <form id="squareForm">
-                    <input type="number" name="sideLength" id="sideLength" min=2 max=10>
-                    <br>
-                    <input type="submit" style="display:none">
-                    <input type="submit" value="Generate Square">
-                </form>
-                <br>
-                <div id="squareLocation">
-                </div>
-            </div>
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a
+                href="javascript:"
+                class="nav-link active hw4-nav"
+                onclick="changePart('hw4');active(this, 'hw4-nav');"
+                >Homework 4</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw4-nav"
+                href="javascript:"
+                onclick="changePart('hw4part1');active(this, 'hw4-nav');"
+                >Part 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw4-nav"
+                href="javascript:"
+                onclick="changePart('hw4part2');active(this, 'hw4-nav');"
+                >Part 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw4-nav"
+                href="javascript:"
+                onclick="changePart('hw4ec');active(this, 'hw4-nav');"
+                >Extra Credit</a
+              >
+            </li>
+          </ul>
         </div>
+        <div id="hw4" class="part card-body">
+          Bryan Liang CNIT133 Homework 4 Loops
+        </div>
+        <div id="hw4part1" class="part card-body" style="display:none">
+          <p>
+            Part 1a: Create a webpage that contains a script, using the for
+            statement, that calculates the product and sum of every fourth
+            integer from 5 to 21 inclusive and then displays the results, along
+            with some accompanying text.
+          </p>
+          <p>
+            Part 1b: On the same webpage as Part 1b, create a script, using the
+            while or do while statement, that calculates the product and sum of
+            every third integer from 3 to 21 inclusive an then displays the
+            results, along with some accompanying text.
+          </p>
+          <p>
+            Use jQuery UI to allow the user to drag an element to a specific
+            area of the page - can be any type of element. For more on jQuery UI
+            draggable see the
+            <a
+              href="https://jqueryui.com/draggable/"
+              target="_blank"
+              rel="noreferrer"
+              >example in this page.</a
+            >
+          </p>
+          <hr />
+          <p id="hw4part1a"><strong>Part 1a:</strong></p>
+          <p id="hw4part1b"><strong>Part 1b:</strong></p>
+          <div id="drag" class="ui-widget-content">
+            <p>Drag me around!</p>
+          </div>
+        </div>
+        <div id="hw4part2" class="part card-body" style="display:none">
+          <p>
+            Create a webpage that contains a script that will calculate compound
+            interest on a principal of $1000 for interest rates of 5, 6, and 7%,
+            for years 1 through 10. The formula to use is : A = P(1 + r)^n where
+          </p>
+          <p>
+            P is the principal (the initial amount you borrow or deposit)
+            <br />
+            r is the annual rate of interest (percentage)
+            <br />
+            n is the number of years the amount is deposited
+            <br />
+            A is the amount of money accumulated after n years, including
+            interest
+          </p>
+          <hr />
+          <div id="tableContainer"></div>
+        </div>
+        <div id="hw4ec" class="part card-body" style="display:none">
+          <p>
+            Create a webpage that contains a script that reads in the size of
+            the side of a square and displays a hollow square of that size
+            constructed of asterisks. Your script should work for squares only
+            for side sizes between 2 and 10 inclusive. Display an error message
+            if the user enters any number that is not between 2 and 10 and, of
+            course, DO NOT PRESENT THE SQUARE. Be sure that the output looks
+            like a square. A common error is having the top and bottom row of
+            asterisks appear to be smaller than the sides.
+          </p>
+          <hr />
+          <form id="squareForm">
+            <input
+              type="number"
+              name="sideLength"
+              id="sideLength"
+              min="2"
+              max="10"
+            />
+            <br />
+            <input type="submit" style="display:none" />
+            <input type="submit" value="Generate Square" />
+          </form>
+          <br />
+          <div id="squareLocation"></div>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://use.fontawesome.com/18b1df2d3f.js"></script>
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>

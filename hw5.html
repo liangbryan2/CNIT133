@@ -1,61 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="CNIT 133 Homework 5">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CNIT 133 Homework 4" />
     <title>CNIT 133 HW5</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand text-info" href="index.html">CNIT133</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Homeworks
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="hw2.html">Homework 2</a>
-                        <a class="dropdown-item" href="hw3.html">Homework 3</a>
-                        <a class="dropdown-item" href="hw4.html">Homework 4</a>
-                        <a class="dropdown-item" href="hw5.html">Homework 5</a>
-                        <a class="dropdown-item" href="hw6.html">Homework 6</a>
-                        <a class="dropdown-item" href="hw7.html">Homework 7</a>
-                        <a class="dropdown-item" href="hw8.html">Homework 8</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand text-info" href="index.html">CNIT133</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Homeworks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="hw2.html">Homework 2</a>
+              <a class="dropdown-item" href="hw3.html">Homework 3</a>
+              <a class="dropdown-item" href="hw4.html">Homework 4</a>
+              <a class="dropdown-item" href="hw5.html">Homework 5</a>
+              <a class="dropdown-item" href="hw6.html">Homework 6</a>
+              <a class="dropdown-item" href="hw7.html">Homework 7</a>
+              <a class="dropdown-item" href="hw8.html">Homework 8</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div class="container">
-        Coming soon...
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a
+                href="javascript:"
+                class="nav-link active hw5-nav"
+                onclick="changePart('hw5');active(this, 'hw5-nav');"
+                >Homework 5</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw5-nav"
+                href="javascript:"
+                onclick="changePart('hw5part1');active(this, 'hw5-nav');"
+                >Part 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw5-nav"
+                href="javascript:"
+                onclick="changePart('hw5part2');active(this, 'hw5-nav');"
+                >Part 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link hw5-nav"
+                href="javascript:"
+                onclick="changePart('hw5part3');active(this, 'hw5-nav');"
+                >Part 3</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="hw5" class="part card-body">CNIT 133 Homework 5 - Arrays</div>
+        <div id="hw5part1" class="part card-body" style="display:none">
+          <p>
+            Create a webpage containing a form that displays an input text box,
+            radio buttons, checkboxes, and select items; along with a script
+            that executes form validation.
+          </p>
+          <p>
+            Your script should validate whether the user has entered data in the
+            input text box, has checked a radio button, has checked at least one
+            checkbox, and has selected an option from the list of options in the
+            select element.
+          </p>
+          <hr />
+          <form id="hw5part1form">
+            <label for="hw5part1text">What is your name?</label><br />
+            <input type="text" id="hw5part1text" name="hw5part1text" />
+            <span id="hw5part1texterror"></span>
+            <br />
+            <p style="padding-top: 1rem">What is your age?</p>
+            <input
+              type="radio"
+              id="hw5part1radio1"
+              name="hw5part1radio"
+              value="1-17"
+            />
+            <label for="hw5part1radio1">1-17</label>
+            <br />
+            <input
+              type="radio"
+              id="hw5part1radio2"
+              name="hw5part1radio"
+              value="18-64"
+            />
+            <label for="hw5part1radio2">18-64</label>
+            <br />
+            <input
+              type="radio"
+              id="hw5part1radio3"
+              name="hw5part1radio"
+              value="65+"
+            />
+            <label for="hw5part1radio3">65+</label>
+            <span id="hw5part1radioerror"></span>
+            <br />
+            <p style="padding-top: 1rem ">Select at least one</p>
+            <input
+              type="checkbox"
+              id="hw5part1cb1"
+              name="hw5part1cb"
+              value="coding"
+            />
+            <label for="hw5part1cb1">I like to code.</label><br />
+            <input
+              type="checkbox"
+              id="hw5part1cb2"
+              name="hw5part1cb"
+              value="movies"
+            />
+            <label for="hw5part1cb2">I like to watch movies.</label><br />
+            <input
+              type="checkbox"
+              id="hw5part1cb3"
+              name="hw5part1cb"
+              value="video games"
+            />
+            <label for="hw5part1cb3">I like playing video games.</label>
+            <br />
+            <input
+              type="checkbox"
+              id="hw5part1cb4"
+              name="hw5part1cb"
+              value="other"
+            />
+            <label for="hw5part1cb4">I have other interests.</label>
+            <br />
+            <span id="hw5part1cberror"></span>
+            <br />
+            <label for="hw5part1select"
+              >What is your favorite ice cream flavor?</label
+            >
+            <br />
+            <select id="hw5part1select" name="hw5part1select">
+              <option value="">Select a flavor</option>
+              <option value="strawberry">Strawberry</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+            </select>
+            <span id="hw5part1selecterror"></span>
+            <br />
+            <br />
+            <input type="button" id="hw5part1button" value="Submit" />
+          </form>
+          <div class="modal fade" id="hw5part1modal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Thanks for submitting!</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body" id="hw5part1modalbody"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="hw5part2" class="part card-body" style="display:none">
+          <p>
+            Create a 2nd webpage that contains a script that utilizes 2 pulldown
+            menus. The first one should utilize an onchange event handler. The
+            second should utilize a button with an onclick event handler to
+            navigate to a page after an option is selected. Each pulldown menu
+            should include at least 3 URL destinations.
+          </p>
+          <hr />
+          <span>On change</span>
+          <select id="hw5part2onchange" onchange="hw5part2onchange(this.value)">
+            <option value="">Select One</option>
+            <option value="https://www.google.com/">Google</option>
+            <option value="https://www.youtube.com/">Youtube</option>
+            <option value="https://www.ccsf.edu/">CCSF</option>
+          </select>
+          <br /><br />
+          <span>On click</span>
+          <select id="hw5part2onclick">
+            <option value="">Select One</option>
+            <option value="https://www.google.com/">Google</option>
+            <option value="https://www.youtube.com/">Youtube</option>
+            <option value="https://www.ccsf.edu/">CCSF</option>
+          </select>
+          <button id="hw5part2onclick" onclick="hw5part2onclick()">
+            Go to site
+          </button>
+        </div>
+        <div id="hw5part3" class="part card-body" style="display:none">
+          <p>
+            Create a webpage that enables the user to enter a state name (full
+            or just the two characters that represent the state) and have the
+            State Name, State Capital, and population appear in separate input
+            box or textarea.
+          </p>
+          <hr />
+          <form id="stateInfoForm">
+            <label for="stateName">State name:</label>
+            <input type="text" name="stateName" id="stateName" />
+            <input type="submit" value="State info" />
+          </form>
+          <div id="hw5part3results"></div>
+        </div>
+      </div>
     </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://use.fontawesome.com/18b1df2d3f.js"></script>
+    <script src="scripts.js"></script>
+  </body>
 </html>
