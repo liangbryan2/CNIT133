@@ -461,7 +461,9 @@ function hw5part2onchange(site) {
 }
 
 function hw5part2onclick() {
-  window.location.href = document.getElementById("hw5part2onclick").value;
+  if (document.getElementById("hw5part2onclick").value) {
+    window.location.href = document.getElementById("hw5part2onclick").value;
+  }
 }
 
 const stateInfoForm = document.getElementById("stateInfoForm");
