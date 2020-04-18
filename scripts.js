@@ -17,94 +17,94 @@ function active(element, hw) {
 // END ALL HOMEWORKS
 
 // FOR JQUERY
-$(document).ready(function() {
+$(document).ready(function () {
   // HOMEWORK 2 JQUERY
-  $("#fade").click(function() {
+  $("#fade").click(function () {
     $("#result").fadeTo("slow", 0.4);
   });
-  $("#reset").click(function() {
+  $("#reset").click(function () {
     $("#result").fadeTo("fast", 1);
   });
   $("#us-value").click(() => {
     $("#us-value").addClass("backgroundGray");
   });
-  $("#instructions").click(function() {
+  $("#instructions").click(function () {
     $("#ec-form").slideToggle("slow");
   });
-  $("#ec-form").submit(function() {
+  $("#ec-form").submit(function () {
     exchangeRate();
     return false;
   });
   // END HOMEWORK 2 JQUERY
 
   // HOMEWORK 3 JQUERY
-  $("#hw3part1form").submit(function(event) {
+  $("#hw3part1form").submit(function (event) {
     event.preventDefault();
   });
 
   $("#salesperson").tooltip();
   $("#hw3part2form")
-    .submit(function(event) {
+    .submit(function (event) {
       event.preventDefault();
     })
     .validate({
       rules: {
         salesperson: {
-          required: true
+          required: true,
         },
         item1: {
           required: true,
-          digits: true
+          digits: true,
         },
         item2: {
           required: true,
-          digits: true
+          digits: true,
         },
         item3: {
           required: true,
-          digits: true
+          digits: true,
         },
         item4: {
           required: true,
-          digits: true
-        }
+          digits: true,
+        },
       },
       messages: {
         item1: "Please input positive integers.",
         item2: "Please input positive integers.",
         item3: "Please input positive integers.",
-        item4: "Please input positive integers."
+        item4: "Please input positive integers.",
       },
-      submitHandler: function(form) {
+      submitHandler: function (form) {
         calculateEarnings();
         return false;
-      }
+      },
     });
   $("#hw3part3form")
-    .submit(function(event) {
+    .submit(function (event) {
       event.preventDefault();
     })
     .validate({
       rules: {
         temperature: {
           required: true,
-          number: true
-        }
+          number: true,
+        },
       },
-      submitHandler: function(form) {
+      submitHandler: function (form) {
         var name = $("input[type=submit][clicked=true]").attr("name");
         var temp = $("#temperature").val();
         calculateTemperature(name, temp);
         return false;
-      }
+      },
     });
-  $("#hw3part3form input[type=submit]").click(function() {
+  $("#hw3part3form input[type=submit]").click(function () {
     $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
     $(this).attr("clicked", "true");
   });
   multiplyRandomZeroToNine();
 
-  $("#hw3part4").submit(function(event) {
+  $("#hw3part4").submit(function (event) {
     event.preventDefault();
     var answer = $("#hw3part4answer").val();
     checkProduct(answer);
@@ -116,7 +116,7 @@ $(document).ready(function() {
   // HOMEWORK 4 JQUERY
   $("#drag").draggable();
 
-  $("#squareForm").submit(function(event) {
+  $("#squareForm").submit(function (event) {
     event.preventDefault();
     var squareLength = $("#sideLength").val();
     generateSquare(squareLength);
@@ -130,9 +130,9 @@ $(document).ready(function() {
       hw5part1text: "required",
       hw5part1radio: "required",
       hw5part1cb: "required",
-      hw5part1select: "required"
+      hw5part1select: "required",
     },
-    errorPlacement: function(error, element) {
+    errorPlacement: function (error, element) {
       var elementForm = "",
         containerError = "";
       offset = element.offset();
@@ -141,7 +141,7 @@ $(document).ready(function() {
       error.prependTo(containerError);
       error.addClass("message");
     },
-    submitHandler: function() {
+    submitHandler: function () {
       var body = $("#hw5part1modalbody");
       var name = $(`<p>Name: ${$("#hw5part1text").val()}</p>`);
       var age = $(
@@ -149,7 +149,7 @@ $(document).ready(function() {
       );
       var interests = $("<p></p>");
       var str = "Interests: ";
-      $("input[name=hw5part1cb]:checked").each(function() {
+      $("input[name=hw5part1cb]:checked").each(function () {
         str = str + $(this).val() + ", ";
       });
       str = str.substring(0, str.length - 2);
@@ -160,10 +160,10 @@ $(document).ready(function() {
       body.append(name, age, interests, flavor);
       $("#hw5part1modal").modal();
       $("#hw5part1form")[0].reset();
-    }
+    },
   });
 
-  $("#hw5part1button").on("click", function() {
+  $("#hw5part1button").on("click", function () {
     var body = $("#hw5part1modalbody");
     body.empty();
     $("#hw5part1form").submit();
@@ -197,13 +197,13 @@ function process() {
   min = Math.min(num1, num2, num3);
   max = Math.max(num1, num2, num3);
   if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
-    document.forms["part2"].elements["result"].value = `The sum is ${num1 +
-      num2 +
-      num3}.\nThe average is ${((num1 + num2 + num3) / 3).toFixed(
+    document.forms["part2"].elements["result"].value = `The sum is ${
+      num1 + num2 + num3
+    }.\nThe average is ${((num1 + num2 + num3) / 3).toFixed(
       2
-    )}.\nThe product is ${num1 *
-      num2 *
-      num3}.\nThe min is ${min}.\nThe max is ${max}.`;
+    )}.\nThe product is ${
+      num1 * num2 * num3
+    }.\nThe min is ${min}.\nThe max is ${max}.`;
   } else {
     document.forms["part2"].elements["result"].value =
       "Please enter integer numbers.";
@@ -230,7 +230,7 @@ function processp3() {
   numArr.push(p3num4);
   p3num5 = parseInt(document.forms["part3"].elements["p3num5"].value);
   numArr.push(p3num5);
-  numArr.forEach(num => {
+  numArr.forEach((num) => {
     if (num < 0) {
       negative++;
     } else if (num == 0) {
@@ -467,7 +467,7 @@ function hw5part2onclick() {
 }
 
 const stateInfoForm = document.getElementById("stateInfoForm");
-stateInfoForm.addEventListener("submit", event => {
+stateInfoForm.addEventListener("submit", (event) => {
   event.preventDefault();
   $("#hw5part3results").empty();
   const stateArray = [
@@ -476,7 +476,7 @@ stateInfoForm.addEventListener("submit", event => {
     ["az", "arizona", ["AZ", "Arizona", "Phoenix", "7,171,646"]],
     ["ar", "arkansas", ["AR", "Arkansas", "Little Rock", "3,010,825"]],
     ["ca", "california", ["CA", "California", "Sacramento", "39,557,045"]],
-    ["co", "colorado", ["CO", "Colorado", "Denver", "5,694,564"]]
+    ["co", "colorado", ["CO", "Colorado", "Denver", "5,694,564"]],
   ];
   var stateName = document.getElementById("stateName").value.trim();
   stateName = stateName.toLowerCase();
@@ -510,3 +510,31 @@ stateInfoForm.addEventListener("submit", event => {
   }
 });
 // END HOMEWORK 5
+
+// HOMEWORK 6
+
+function hw6part1submit() {
+  var input = document.getElementById("hw6part1input").value;
+  var inputStr = input + "";
+  var decimalPlaces = (inputStr.split(".")[1] || []).length;
+  if (decimalPlaces < 4) {
+    document.getElementById("hw6part1results").innerHTML =
+      "Please enter a number with at least 4 decimal places.";
+  } else {
+    input = parseFloat(input);
+    var integer = Math.round(input);
+    var sqrt = Math.round(Math.sqrt(input));
+    var tenths = input.toFixed(1);
+    var hundredths = input.toFixed(2);
+    var thousandths = input.toFixed(3);
+    document.getElementById("hw6part1results").innerHTML = `Number: ${input}
+Nearest Integer: ${integer}
+Square root: ${sqrt}
+Rounded to tenths: ${tenths}
+Rounded to hundredths: ${hundredths}
+Rounded to thousandths: ${thousandths}`;
+  }
+  return false;
+}
+
+// END HOMEWORK 6
