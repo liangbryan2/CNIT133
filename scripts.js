@@ -544,7 +544,7 @@ Rounded to thousandths: ${thousandths}`;
 }
 
 function hw6part2submit() {
-  var string = document.getElementById("hw6part2input").value;
+  var string = document.getElementById("hw6part2input").value.trim();
   var char = document.getElementById("hw6part2char").value;
   var count = 0;
   for (var i = 0; i < string.length; i++) {
@@ -554,7 +554,7 @@ function hw6part2submit() {
   }
   if (count == 0) {
     var myWindow = window.open("", "NoCharFound", "width=300,height=100");
-    myWindow.document.write(`<p>No ${char} were found in ${string}</p>`);
+    myWindow.document.write(`<p>No '${char}' were found in ${string}</p>`);
   } else {
     document.getElementById(
       "hw6part2results"
