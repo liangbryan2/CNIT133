@@ -170,6 +170,12 @@ $(document).ready(function () {
   });
 
   // END HOMEWORK 5 JQUERY
+
+  // HOMEWORK 6 JQUERY
+
+  $("#hw6part3input").mask("(000) 000-0000");
+
+  // END HOMEWORK 6 JQUERY
 });
 // END JQUERY
 
@@ -533,6 +539,40 @@ Square root: ${sqrt}
 Rounded to tenths: ${tenths}
 Rounded to hundredths: ${hundredths}
 Rounded to thousandths: ${thousandths}`;
+  }
+  return false;
+}
+
+function hw6part2submit() {
+  var string = document.getElementById("hw6part2input").value;
+  var char = document.getElementById("hw6part2char").value;
+  var count = 0;
+  for (var i = 0; i < string.length; i++) {
+    if (string.charAt(i) == char) {
+      count++;
+    }
+  }
+  if (count == 0) {
+    var myWindow = window.open("", "NoCharFound", "width=300,height=100");
+    myWindow.document.write(`<p>No ${char} were found in ${string}</p>`);
+  } else {
+    document.getElementById(
+      "hw6part2results"
+    ).value = `Number of ${char}: ${count}`;
+  }
+  return false;
+}
+
+function hw6part3submit() {
+  var input = document.getElementById("hw6part3input").value;
+  input = input.replace(/\(|\)/g, " ").replace(/-/g, " ");
+  var inputArr = input.split(" ").filter((e) => {
+    return e.trim().length > 0;
+  });
+  if (inputArr.length == 3) {
+    document.getElementById("areacode").value = inputArr[0];
+    document.getElementById("three").value = inputArr[1];
+    document.getElementById("four").value = inputArr[2];
   }
   return false;
 }

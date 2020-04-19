@@ -120,16 +120,73 @@
                 class="form-control"
                 id="hw6part1results"
                 rows="6"
+                disabled
               ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
         <div id="hw6part2" class="part card-body" style="display: none;">
-          Part 2
+          <p>
+            Create a function that searchs a string for a character and displays
+            the number of occurances of that character. Ignore case.
+          </p>
+          <hr />
+          <form onsubmit="return hw6part2submit()">
+            <div class="form-group">
+              <label for="hw6part2input">
+                Enter the string you want to search:
+              </label>
+              <textarea
+                name="hw6part2input"
+                id="hw6part2input"
+                cols="30"
+                rows="3"
+                class="form-control"
+              ></textarea>
+              <label for="hw6part2char"
+                >Enter the character you want to search for:</label
+              >
+              <input id="hw6part2char" type="text" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+            <div class="form-group">
+              <label for="hw6part2results">Results:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="hw6part2results"
+                disabled
+              />
+            </div>
+          </form>
         </div>
         <div id="hw6part3" class="part card-body" style="display: none;">
-          Part 3
+          <form onsubmit="return hw6part3submit()">
+            <div class="form-group">
+              <label for="hw6part3input">Enter a phone number:</label>
+              <input
+                id="hw6part3input"
+                type="tel"
+                class="form-control"
+                placeholder="(999) 999-9999"
+                pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+            <div class="form-group">
+              <label for="areacode">Area Code:</label>
+              <input type="text" id="areacode" class="form-control" />
+              <label for="three">First three:</label>
+              <input type="text" id="three" class="form-control" />
+              <label for="four">Last four:</label>
+              <input type="text" id="four" class="form-control" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -153,6 +210,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <script src="https://use.fontawesome.com/18b1df2d3f.js"></script>
     <script src="scripts.js"></script>
   </body>
