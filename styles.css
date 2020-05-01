@@ -114,3 +114,35 @@ td {
 .error {
   color: red;
 }
+
+.backgroundRed {
+  background-color: red;
+}
+
+.backgroundWhite {
+  background-color: white;
+}
+
+.backgroundBlue {
+  background-color: blue;
+}
+
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}

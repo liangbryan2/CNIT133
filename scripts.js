@@ -176,6 +176,28 @@ $(document).ready(function () {
   $("#hw6part3input").mask("(000) 000-0000");
 
   // END HOMEWORK 6 JQUERY
+
+  // HOMEWORK 7 JQUERY
+
+  $('input:radio[name="radioBackground"]').change(function () {
+    $("#hw7part1").removeClass("backgroundRed backgroundWhite backgroundBlue");
+    $("#hw7part1").addClass(this.value);
+  });
+
+  $("select#fontFamily").change(function () {
+    $("#hw7part1").removeClass("serif sansserif monospace");
+    $("#hw7part1").addClass(this.value);
+  });
+
+  $("div#hw7checkbox input[type=checkbox]").change(function () {
+    if ($(this).is(":checked")) {
+      $("#hw7part1").addClass(this.value);
+    } else {
+      $("#hw7part1").removeClass(this.value);
+    }
+  });
+
+  // END HOMEWORK 7 JQUERY
 });
 // END JQUERY
 
