@@ -51,25 +51,25 @@
                             onclick="changePart('hw2');active(this, 'hw2-nav');">Homework 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part1');active(this, 'hw2-nav');">Part
+                        <a id="hw2part1nav" class="nav-link hw2-nav" href="javascript:" onclick="changePart('hw2part1');active(this, 'hw2-nav');">Part
                             1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part2');active(this, 'hw2-nav');">Part
+                        <a id="hw2part2nav" class="nav-link hw2-nav" href="javascript:" onclick="changePart('hw2part2');active(this, 'hw2-nav');">Part
                             2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:" onclick="changePart('part3');active(this, 'hw2-nav');">Part
+                        <a id="hw2part3nav" class="nav-link hw2-nav" href="javascript:" onclick="changePart('hw2part3');active(this, 'hw2-nav');">Part
                             3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hw2-nav" href="javascript:"
-                            onclick="changePart('extra-credit');active(this, 'hw2-nav');">Extra Credit</a>
+                        <a id="hw2extra-creditnav" class="nav-link hw2-nav" href="javascript:"
+                            onclick="changePart('hw2extra-credit');active(this, 'hw2-nav');">Extra Credit</a>
                     </li>
                 </ul>
             </div>
             <div id="hw2" class="card-body part">Bryan Liang CNIT133 Homework 2</div>
-            <div id="part1" class="card-body part" style="display:none">
+            <div id="hw2part1" class="card-body part" style="display:none">
                 Create a webpage that contains a script that displays in pairs and <strong>strong</strong> (bold), the
                 letters ab and the
                 numbers 12 and 34 on the same line, with each pair of characters separated by one space. Write the
@@ -99,7 +99,7 @@
                     );
                 </script>
             </div>
-            <div id="part2" class="card-body part" style="display:none">
+            <div id="hw2part2" class="card-body part" style="display:none">
                 Create a webpage that contains a script that inputs three integers via form text boxes and displays the
                 sum, average, and product of the three integers, and the smallest and largest of the three integers.
                 Your results should be displayed using a form textarea or a div element - DO NOT USE ALERT!!!.
@@ -136,7 +136,7 @@
                     <input type="reset" id="reset" value="RESET">
                 </form>
             </div>
-            <div id="part3" class="card-body part" style="display:none">
+            <div id="hw2part3" class="card-body part" style="display:none">
                 Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of
                 the negative numbers, the number of positive numbers, and the number of zeros. Use input boxes in a form
                 for the input numbers. Your results should be displayed using a form textarea or a div element - NO
@@ -179,7 +179,7 @@
                     <input type="reset" id="p3reset" value="RESET">
                 </form>
             </div>
-            <div id="extra-credit" class="card-body part" style="display:none">
+            <div id="hw2extra-credit" class="card-body part" style="display:none">
                 <div id="instructions" class="text-primary">Click to show/hide instructions</div>
                 <form id="ec-form">
                     The exchange rates for 1 U.S. dollar in July 2019 were:
@@ -229,14 +229,27 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://use.fontawesome.com/18b1df2d3f.js"></script>
     <script src="scripts.js"></script>
 </body>
 

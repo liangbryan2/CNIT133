@@ -495,48 +495,50 @@ function hw5part2onclick() {
 }
 
 const stateInfoForm = document.getElementById("stateInfoForm");
-stateInfoForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  $("#hw5part3results").empty();
-  const stateArray = [
-    ["al", "alabama", ["AL", "Alabama", "Montgomery", "4,887,871"]],
-    ["ak", "alaska", ["AK", "Alaska", "Juneau", "737,438"]],
-    ["az", "arizona", ["AZ", "Arizona", "Phoenix", "7,171,646"]],
-    ["ar", "arkansas", ["AR", "Arkansas", "Little Rock", "3,010,825"]],
-    ["ca", "california", ["CA", "California", "Sacramento", "39,557,045"]],
-    ["co", "colorado", ["CO", "Colorado", "Denver", "5,694,564"]],
-  ];
-  var stateName = document.getElementById("stateName").value.trim();
-  stateName = stateName.toLowerCase();
-  var successMessage = $(
-    "<p>Thanks for your inquiry, here is the information you requested: </p>"
-  );
-  var abbr = $("<p>State abbr: </p>");
-  var name = $("<p>State name: </p>");
-  var capital = $("<p>State capital: </p>");
-  var population = $("<p>Population: </p>");
-  for (var i = 0; i < stateArray.length; i++) {
-    if (stateArray[i].includes(stateName)) {
-      abbr.append(`<span>${stateArray[i][2][0]}</span>`);
-      name.append(`<span>${stateArray[i][2][1]}</span>`);
-      capital.append(`<span>${stateArray[i][2][2]}</span>`);
-      population.append(`<span>${stateArray[i][2][3]}</span>`);
+if (stateInfoForm) {
+  stateInfoForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    $("#hw5part3results").empty();
+    const stateArray = [
+      ["al", "alabama", ["AL", "Alabama", "Montgomery", "4,887,871"]],
+      ["ak", "alaska", ["AK", "Alaska", "Juneau", "737,438"]],
+      ["az", "arizona", ["AZ", "Arizona", "Phoenix", "7,171,646"]],
+      ["ar", "arkansas", ["AR", "Arkansas", "Little Rock", "3,010,825"]],
+      ["ca", "california", ["CA", "California", "Sacramento", "39,557,045"]],
+      ["co", "colorado", ["CO", "Colorado", "Denver", "5,694,564"]],
+    ];
+    var stateName = document.getElementById("stateName").value.trim();
+    stateName = stateName.toLowerCase();
+    var successMessage = $(
+      "<p>Thanks for your inquiry, here is the information you requested: </p>"
+    );
+    var abbr = $("<p>State abbr: </p>");
+    var name = $("<p>State name: </p>");
+    var capital = $("<p>State capital: </p>");
+    var population = $("<p>Population: </p>");
+    for (var i = 0; i < stateArray.length; i++) {
+      if (stateArray[i].includes(stateName)) {
+        abbr.append(`<span>${stateArray[i][2][0]}</span>`);
+        name.append(`<span>${stateArray[i][2][1]}</span>`);
+        capital.append(`<span>${stateArray[i][2][2]}</span>`);
+        population.append(`<span>${stateArray[i][2][3]}</span>`);
+      }
     }
-  }
-  if (abbr.text().length == 14) {
-    $("#hw5part3results").append(
-      successMessage,
-      abbr,
-      name,
-      capital,
-      population
-    );
-  } else {
-    $("#hw5part3results").append(
-      '<p class="error">That state does not exist in our database.</p>'
-    );
-  }
-});
+    if (abbr.text().length == 14) {
+      $("#hw5part3results").append(
+        successMessage,
+        abbr,
+        name,
+        capital,
+        population
+      );
+    } else {
+      $("#hw5part3results").append(
+        '<p class="error">That state does not exist in our database.</p>'
+      );
+    }
+  });
+}
 // END HOMEWORK 5
 
 // HOMEWORK 6
@@ -600,3 +602,14 @@ function hw6part3submit() {
 }
 
 // END HOMEWORK 6
+
+// HOMEWORK 7
+if (window.location.hash) {
+  var hash = window.location.hash.substring(1);
+  var hw = hash.split(".")[0];
+  var part = hash.split(".")[1];
+  changePart(hw + part);
+  var element = document.getElementById(hw + part + "nav");
+  active(element, hw + "-nav");
+}
+// END HOMEWORK 7
