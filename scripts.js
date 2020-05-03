@@ -197,6 +197,16 @@ $(document).ready(function () {
     }
   });
 
+  $(".dropdown").hover(
+    function () {
+      $(this).addClass("show");
+      $(this).find(".dropdown-menu").addClass("show");
+    },
+    function () {
+      $(this).removeClass("show");
+      $(this).find(".dropdown-menu").removeClass("show");
+    }
+  );
   // END HOMEWORK 7 JQUERY
 });
 // END JQUERY
@@ -612,4 +622,5 @@ if (window.location.hash) {
   var element = document.getElementById(hw + part + "nav");
   active(element, hw + "-nav");
 }
+
 // END HOMEWORK 7
