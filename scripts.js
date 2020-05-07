@@ -208,6 +208,12 @@ $(document).ready(function () {
     }
   );
   // END HOMEWORK 7 JQUERY
+
+  $("#pokemonForm").submit(function (event) {
+    event.preventDefault();
+    var pokemon = $("#pokemon").val();
+    searchPokemon(pokemon);
+  });
 });
 // END JQUERY
 
@@ -624,3 +630,43 @@ if (window.location.hash) {
 }
 
 // END HOMEWORK 7
+
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.php?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+
+function searchPokemon(str) {
+  var pokemon = str.trim().toLowerCase();
+  $.get("https://pokeapi.co/api/v2/pokemon/" + pokemon, function (
+    data,
+    status
+  ) {
+    $("#pokemonResults").empty();
+    if (status == "success") {
+      var name = $("<div class='card-text'>").text("Name: " + data.name);
+      var types = $("<div class='card-text'>");
+      var typesText = "Types: ";
+      data.types.forEach((type) => {
+        typesText += type.type.name + ", ";
+      });
+      typesText = typesText.slice(0, -2);
+      types.text(typesText);
+      $("#pokemonResults").append(name, types);
+    }
+  }).fail(function () {
+    $("#pokemonResults").empty();
+    $("#pokemonResults").append("<p>Not a valid Pokemon name.</p>");
+  });
+}
